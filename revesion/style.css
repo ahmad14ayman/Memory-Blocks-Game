@@ -1,0 +1,81 @@
+*{
+    box-sizing: border-box;
+}
+
+.container{
+    margin: 80px auto 0;
+    width: 200px;
+    height: 200px;
+    perspective: 400px;
+}
+.box{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+.box:hover{
+    transform: rotateY(180deg);
+}
+.box .front{
+    background-color: red;
+}
+.box .back{
+    background-color: green;
+    transform: rotateY(180deg);
+}
+.box .face{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    font-size: 40px;
+    font-weight: bold;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    backface-visibility: hidden;
+}
+
+/* ****************************************** */
+
+.box2{
+    width: 200px;
+    height: 200px;
+    margin: 20px auto;
+    position: relative;
+    cursor: pointer;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+
+.face2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 35px;
+    font-weight: bold;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+}
+
+.front2{
+    background-color: red;
+}
+.back2{
+    background-color: green;
+    transform: rotateY(180deg);
+}
+
+.box2:hover{
+    transform: rotateY(180deg);
+}
